@@ -3,23 +3,71 @@
     <div class="header">
       <Affix>
         <div
-          class="menu"
-          :style="this.menuHeight">
+          class="nav"
+          :style="this.navStyle">
+          <div class="drawer">
+            <button
+              class="drawerIcon"
+              v-if="this.pageWidth < 1000"
+              @click="Drawer = true">
+              <Icon type="md-menu" size="30"/>
+            </button>
+          </div>
+          <drawer
+            placement="left"
+            :closable="false"
+            v-model="Drawer"
+            width="250">
+            <p class="drawerP">首页</p>
+            <p class="drawerP">关于我们</p>
+            <p class="drawerP">解决方案</p>
+            <p class="drawerP">典型案例</p>
+            <p class="drawerP">专业服务</p>
+          </drawer>
+          <div class="logo" :style="this.logoDiv">
+            <img :src="this.logoPic" :style="this.logoStyle">
+          </div>
+          <div class="menu"  v-if="this.pageWidth > 1000">
+            <menu mode="horizontal" active-name="1" theme="light">
+              <menu-item name="1">
+                专业服务
+              </menu-item>
+              <menu-item name="2">
+                典型案例
+              </menu-item>
+              <menu-item name="3">
+                解决方案
+              </menu-item>
+              <menu-item name="4">
+                关于我们
+              </menu-item>
+              <menu-item name="5">
+                首页
+              </menu-item>
+            </menu>
+          </div>
         </div>
       </Affix>
       <div class="carousel">
         <Carousel
           autoplay
           loop
+          :autoplay-speed="autoplaySpeed"
           :style="this.bannerHeight">
           <CarouselItem>
-            <div class="demo-carousel"><img :style="this.bannerHeight" src="../.././static/img/carousel/banner1.jpg"></div>
+            <div class="demo-carousel">
+              <img :style="this.bannerHeight" :src="this.bannerPic1">
+            </div>
           </CarouselItem>
           <CarouselItem>
-            <div class="demo-carousel"><img :style="this.bannerHeight" src="../.././static/img/carousel/banner2.jpg"></div>
+            <div class="demo-carousel">
+              <img :style="this.bannerHeight" :src="this.bannerPic2">
+            </div>
           </CarouselItem>
           <CarouselItem>
-            <div class="demo-carousel"><img :style="this.bannerHeight" src="../.././static/img/carousel/banner3.jpg"></div>
+            <div class="demo-carousel">
+              <img :style="this.bannerHeight" :src="this.bannerPic3">
+            </div>
           </CarouselItem>
         </Carousel>
       </div>
@@ -47,9 +95,17 @@ export default {
     return {
       scroll: 0,
       pageWidth: document.documentElement.clientWidth,
-      menuHeight: '',
+      navStyle: '',
+      logoPic: '',
+      logoStyle: '',
+      logoDiv: '',
+      Drawer: false,
+      autoplaySpeed: 5000,
       bannerHeight: '',
-      bannerStyle: ''
+      bannerStyle: '',
+      bannerPic1: '',
+      bannerPic2: '',
+      bannerPic3: '',
     }
   },
   created() {
@@ -65,44 +121,106 @@ export default {
     handleResponsivePage () {
       //实时获取页面宽度
       this.pageWidth = document.documentElement.clientWidth
-      console.log(this.pageWidth)
       //实时获取滚动条位置
       this.scroll = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
-      //定义menu、轮播图样式
-      if (this.scroll < 1 && this.pageWidth > 1100) {
-        this.menuHeight = 'height: 80px; background-color: aquamarine'
-        this.bannerHeight = 'height:' + this.pageWidth * 0.304 + 'px;'
-      }else if (this.scroll > 1 && this.pageWidth > 1100) {
-        this.menuHeight = 'height: 60px; background-color: burlywood'
-        this.bannerHeight = 'height:' + this.pageWidth * 0.304 + 'px;'
-      }else if (this.scroll < 1 && this.pageWidth < 1100 && this.pageWidth > 700) {
-        this.menuHeight = 'height: 60px; background-color: aquamarine;'
-        this.bannerHeight = 'height: 500px;'
-      }else if (this.scroll > 1 && this.pageWidth < 1100 && this.pageWidth > 700) {
-        this.menuHeight = 'height: 60px; background-color: burlywood;'
-        this.bannerHeight = 'height: 500px;'
-      }else if (this.scroll < 1 && this.pageWidth < 700) {
-        this.menuHeight = 'height: 60px; background-color: aquamarine;'
-        this.bannerHeight = 'height: 640px;'
-      }else if (this.scroll > 1 && this.pageWidth < 700) {
-        this.menuHeight = 'height: 60px; background-color: burlywood;'
-        this.bannerHeight = 'height: 640px;'
+      this.setNavStyle()
+      this.setBannerStyle()
+    },
+    //设置nav
+    setNavStyle () {
+      if (this.scroll < 1) {
+        this.navStyle = 'background-color: aliceblue'
+      }else {
+        this.navStyle = 'background-color: rgba(240,248,255,0.3);'
+      }
+      this.logoPic = '../.././static/img/EastState.png'
+      if (this.pageWidth > 1000) {
+        this.logoStyle = 'margin-left: 15%'
+        this.logoDiv = ''
+      }else {
+        this.logoStyle = ''
+        this.logoDiv = 'text-align: center;'
       }
     },
+    //设置轮播图
+    setBannerStyle () {
+      if (this.pageWidth > 1000) {
+        this.bannerHeight = 'height:' + this.pageWidth * 0.304 + 'px;'
+        this.bannerPic1 = '../.././static/img/carousel/banner_pc1.jpg'
+        this.bannerPic2 = '../.././static/img/carousel/banner_pc2.jpg'
+        this.bannerPic3 = '../.././static/img/carousel/banner_pc3.jpg'
+      } else if (this.pageWidth < 1000 && this.pageWidth > 700) {
+        this.bannerHeight = 'height: 500px;'
+        this.bannerPic1 = '../.././static/img/carousel/banner_P1.jpg'
+        this.bannerPic2 = '../.././static/img/carousel/banner_P2.jpg'
+        this.bannerPic3 = '../.././static/img/carousel/banner_P3.jpg'
+      } else if (this.pageWidth < 700) {
+        this.bannerHeight = 'height: 640px;'
+        this.bannerPic1 = '../.././static/img/carousel/banner_M1.jpg'
+        this.bannerPic2 = '../.././static/img/carousel/banner_M2.jpg'
+        this.bannerPic3 = '../.././static/img/carousel/banner_M3.jpg'
+      }
+    }
   },
   mounted() {
     this.handleResponsivePage()
   }
 }
 </script>
-<style>
+<style scoped>
   .header {
     background-color: antiquewhite;
   }
   .carousel {
-    color: crimson;
+  }
+  .nav {
+    height: 60px;
+    position:relative;
+    overflow: hidden;
+  }
+  .drawer {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .drawerIcon {
+    border: 0;
+    background-color: transparent;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  .drawerP {
+    color: #2b2e2e;
+    margin: 35px 0px 0px 40px;
+    font-size: 16px;
+  }
+  .logo {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 10px;
+    z-index: 1;
   }
   .menu {
+    position: absolute;
+    width: 85%;
+    height: 30px;
+    left: 0;
+    top: 15px;
+    z-index: 3;
+  }
+  .ivu-menu-item {
+    width: 100px;
+    float: right;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 3px;
+    text-align: right;
+    color: #2b2e2e;
   }
   .content-Customize {
     height: 690px;
