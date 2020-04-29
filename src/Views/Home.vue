@@ -175,12 +175,12 @@
         </div>
         <div class="industryTop">
           <div style="margin-top: 30px">
-            <h class="topItem">Industry</h>
+            <a class="topItem">Industry</a>
             <hr style="width: 100px; height: 1px; background-color: #ffffff; border: 0; margin: 0 auto">
             <h class="topTitle" style="line-height: 100px">面向行业客户的全面解决方案</h>
             <br>
             <div class="topInfo">
-              <a>东州科技以210余个业务方向，750种解决方案及产品<br>，支撑电信、能源、金融、IT、医疗、环保等20余个行业的快速发展，<br>推动国民经济基础设施与重要民生领域的信息化水平不断提高。</a>
+              <h>东州科技以210余个业务方向，750种解决方案及产品<br>，支撑电信、能源、金融、IT、医疗、环保等20余个行业的快速发展，<br>推动国民经济基础设施与重要民生领域的信息化水平不断提高。</h>
             </div>
           </div>
         </div>
@@ -190,7 +190,9 @@
     </div>
     <div class="product">
       <div class="productHeader">
-        <h class="topItem">Product</h>
+        <div style="margin-top: 60px">
+          <a class="topItem">Product</a>
+        </div>
         <hr style="width: 100px; height: 1px; background-color: #ffffff; border: 0; margin: 0 auto">
         <p style="line-height: 30px; background-color: white; width: 300px; margin: 0 auto; margin-top: 20px; border-radius: 30px; color: #2a7cd0">全面支撑客户数字化转型与智能化运营</p>
       </div>
@@ -304,11 +306,147 @@
         </button>
       </div>
     </div>
+    <div class="cloud">
+      <div class="cloudHeaderPc">
+        <div class="CloudTitlePc">
+          <a style="font-size: 50px; color: #2b2e2e; font-family: 'Microsoft YaHei';">CLOUD</a>
+          <br>
+          <h style="font-size: 30px; color: #2b2e2e; font-family: 'Microsoft YaHei'">智能服务，推动客户业务变革</h>
+        </div>
+      </div>
+      <div class="cloudMainPc">
+        <row>
+          <i-col span="8" class="cloudColPc">
+            <div>
+              <img style="width: 100%" src="../.././static/img/cloud/2475-banner.jpg">
+            </div>
+            <div style="text-align: center; margin-top: 20px">
+              <p class="fontTitle1">医疗研究云平台</p>
+              <divider style="margin: 10px 0; background-color: #999999"></divider>
+              <a style="color: #999999; font-family: 'Microsoft YaHei'; font-size: 16px">READ MORE</a>
+            </div>
+          </i-col>
+          <i-col span="8" class="cloudColPc">
+            <div>
+              <img style="width: 100%" src="../.././static/img/cloud/2419-banner.jpg">
+            </div>
+            <div style="text-align: center; margin-top: 20px">
+              <p class="fontTitle1">云管理服务</p>
+              <divider style="margin: 10px 0; background-color: #999999"></divider>
+              <a style="color: #999999; font-family: 'Microsoft YaHei'; font-size: 16px">READ MORE</a>
+            </div>
+          </i-col>
+          <i-col span="8" class="cloudColPc">
+            <div>
+              <img style="width: 100%" src="../.././static/img/cloud/service-platform-for-small-and-medium-enterprises-cropped.jpg">
+            </div>
+            <div style="text-align: center; margin-top: 20px">
+              <p class="fontTitle1">中小企业云平台</p>
+              <divider style="margin: 10px 0; background-color: #999999"></divider>
+              <a style="color: #999999; font-family: 'Microsoft YaHei'; font-size: 16px">READ MORE</a>
+            </div>
+          </i-col>
+        </row>
+      </div>
+    </div>
     <div class="serve">
+      <div class="serveHeaderPc">
+        <a class="topItem">Service</a>
+        <hr style="width: 20px; height: 2px; background-color: #ffffff; border: 0; margin: 0 auto">
+        <h style="line-height: 80px; color: white; font-size: 30px">专业服务，赋能客户业务发展</h>
+      </div>
+      <div class="serveMain">
+        <div class="serveLeft">
+          <div style="margin-top: 150px; height: 50px; width: 50%; margin-left: 50%">
+            <button class="serveButtonPc">
+              <Icon size="30" style="color: white" type="md-arrow-round-back" />
+            </button>
+          </div>
+        </div>
+        <div class="serveBanner">
+          <div style="height: 280px; margin-top: 30px; margin-left: 1%; width: 165%">
+            <div style="height: 280px; width: 20%; float: left">
+              <div class="serveBannerItem">
+                <p class="fontTitle1" style="text-align: center">软件工程服务</p>
+                <divider style="margin: 10px 0; background-color: #999999"/>
+                <p>东州通过建立完善的交付服务模式，在全球范围内向客户提供全生命周期的从设备端到服务器端的软件开发/维护服务。<a> >>了解更多</a></p>
+              </div>
+            </div>
+            <div style="height: 280px; width: 20%; float: left;">
+              <div class="serveBannerItem">
+                <p class="fontTitle1" style="text-align: center">性能工程服务</p>
+                <divider style="margin: 10px 0; background-color: #999999"/>
+                <p>东州性能工程服务可以在系统建设的各个阶段帮助客户及早发现、控制、管理并消除系统潜在的问题，使现有设备充分发挥生产力，从而提升企业和组织的工作效率和终端用户满意度，推动业务规模不断提升扩大。<a> >>了解更多</a></p>
+              </div>
+            </div>
+            <div style="height: 280px; width: 20%; float: left">
+              <div class="serveBannerItem">
+                <p class="fontTitle1" style="text-align: center">一站式BPO服务</p>
+                <divider style="margin: 10px 0; background-color: #999999"/>
+                <ul>
+                  <li>客户联络中心服务</li>
+                  <li>IT服务</li>
+                  <li>数据中心搭建与运维服务</li>
+                  <li>后台办公服务</li>
+                  <li>一站式跨境电商解决方案</li>
+                  <a> >>了解更多</a>
+                </ul>
+              </div>
+            </div>
+            <div style="height: 280px; width: 20%; float: left;">
+              <div class="serveBannerItem">
+                <p class="fontTitle1" style="text-align: center">产品工程服务</p>
+                <divider style="margin: 10px 0; background-color: #999999"/>
+                <ul>
+                  <li>汽车电子</li>
+                  <li>数字家庭产品及智能设备</li>
+                  <a> >>了解更多</a>
+                </ul>
+              </div>
+            </div>
+            <div style="height: 280px; width: 20%; float: left">
+              <div class="serveBannerItem">
+                <p class="fontTitle1" style="text-align: center">专业化测试服务</p>
+                <divider style="margin: 10px 0; background-color: #999999"/>
+                <ul>
+                  <li>产品测试服务</li>
+                  <li>接续性测试服务</li>
+                  <li>应用系统测试</li>
+                  <li>后台办公服务</li>
+                  <li>移动终端自动化测试平台</li>
+                  <a> >>了解更多</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="serveRight">
+          <div style="margin-top: 150px; width: 50%; height: 50px;">
+            <button class="serveButtonPc" style="float: right">
+              <Icon size="30" style="color: white" type="md-arrow-round-forward" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="serveFoot">
+        <button class="serveFootButton">了解更多</button>
+      </div>
     </div>
     <div class="about">
+      <div class="aboutHeaderPc">
+        <div class="CloudTitlePc">
+          <a style="font-size: 50px; color: #2b2e2e; font-family: 'Microsoft YaHei';">ABOUT</a>
+          <br>
+          <h style="font-size: 30px; color: #2b2e2e; font-family: 'Microsoft YaHei'">公司简介</h>
+        </div>
+      </div>
     </div>
     <div class="footer">
+      <div><img style="width: 100%" src="../.././static/img/foot/s5-bg.jpg"></div>
+      <div class="footMain">
+        <div class="footMainList"></div>
+        <div class="footMainContact"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -331,6 +469,7 @@ export default {
       bannerPic2: '',
       bannerPic3: '',
       industryStyle: '',
+      cloudColStyle: '',
     }
   },
   created() {
@@ -352,7 +491,7 @@ export default {
       this.$nextTick()
       this.setHeaderNav()
       this.setHeaderBanner()
-      this.setindustry()
+      this.setCloud()
     },
     //nav
     setHeaderNav () {
@@ -390,7 +529,8 @@ export default {
       }
     },
     // 行业模块
-    setindustry () {
+    setCloud () {
+      this.cloudColStyle = 'height:' + this.pageWidth * 0.26 + 'px'
     },
   },
   mounted() {
@@ -401,6 +541,11 @@ export default {
 <style>
   a:hover {
     color: peachpuff;
+  }
+  .fontTitle1{
+    color: #666666;
+    font-size: 28px;
+    font-family: 'Microsoft YaHei'
   }
   .header {
     position:relative;
@@ -539,15 +684,15 @@ export default {
   .product {
     width: 100%;
     height: 940px;
-    position: absolute;
+    position: relative;
     background-image: url("../.././static/img/product/s2-bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 1060px;
+    overflow: hidden;
   }
   .productHeader {
     width: 100%;
     height: 130px;
-    margin: 60px 0 0 0;
     text-align: center;
   }
   .productMain {
@@ -583,5 +728,133 @@ export default {
     width: 100%;
     height: 90px;
     text-align: center;
+  }
+  .cloud {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 60px;
+  }
+  .cloudHeaderPc {
+    width: 648px;
+    height: 140px;
+    background-image: url("../.././static/img/cloud/cloud.png");
+    background-repeat: no-repeat;
+    background-size: 648px 140px;
+    margin: 70px 0px 40px 0px;
+    overflow: hidden;
+  }
+  .CloudTitlePc {
+    width: 300px;
+    height: 120px;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  .cloudMainPc {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .cloudColPc {
+    padding: 15px;
+  }
+  .serve {
+    width: 100%;
+    height: 650px;
+    background-image: url("../.././static/img/server/s4-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+  }
+  .serveHeaderPc {
+    padding: 60px 0 10px 0;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+  }
+  .serveMain {
+    width: 100%;
+    height: 350px;
+  }
+  .serveLeft {
+    width: 10%;
+    height: 100%;
+    float: left;
+  }
+  .serveBanner {
+    width: 80%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+  }
+  .serveRight {
+    width: 10%;
+    height: 100%;
+    float: left;
+  }
+  .serveButtonPc {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #a7bdf6;
+    cursor: pointer;
+    outline: none;
+  }
+  .serveButtonPc:hover {
+    background-color: aquamarine;
+  }
+  .serveBannerItem {
+    height: 250px;
+    width: 96%;
+    margin: 15px 2% 15px 2%;
+    padding: 30px 10% 30px 10%;
+    background-color: white;
+  }
+  .serveFoot {
+    text-align: center;
+  }
+  .serveFootButton {
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+  }
+  .about {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .aboutHeaderPc {
+    width: 648px;
+    height: 140px;
+    background-image: url("../.././static/img/about/about.png");
+    background-repeat: no-repeat;
+    background-size: 648px 140px;
+    margin: 70px 0px 40px 0px;
+    overflow: hidden;
+  }
+  .footer {
+    width: 100%;
+    background-color: #218ecd;
+  }
+  .footMain {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+  }
+  .footMainList {
+    width: 72%;
+    height: 380px;
+    float: left;
+    padding: 60px 0;
+    background-color: #999999;
+  }
+  .footMainContact {
+    width: 28%;
+    height: 380px;
+    float: left;
+    padding: 60px 0;
+    background-color: peachpuff;
   }
 </style>
