@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7766771",
+      "name": "icon_qq",
+      "font_class": "icon_qq",
+      "unicode": "eb9a",
+      "unicode_decimal": 60314
+    },
+    {
+      "icon_id": "7766788",
+      "name": "icon_service",
+      "font_class": "icon_service",
+      "unicode": "eb9d",
+      "unicode_decimal": 60317
+    },
+    {
+      "icon_id": "7766806",
+      "name": "icon_wechat",
+      "font_class": "icon_wechat",
+      "unicode": "eba0",
+      "unicode_decimal": 60320
+    }
+  ]
+}

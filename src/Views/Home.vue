@@ -433,19 +433,95 @@
       </div>
     </div>
     <div class="about">
-      <div class="aboutHeaderPc">
-        <div class="CloudTitlePc">
-          <a style="font-size: 50px; color: #2b2e2e; font-family: 'Microsoft YaHei';">ABOUT</a>
-          <br>
-          <h style="font-size: 30px; color: #2b2e2e; font-family: 'Microsoft YaHei'">公司简介</h>
+      <div style="width: 80%; margin-left: 10%">
+        <div class="aboutHeaderPc">
+          <div class="CloudTitlePc">
+            <a style="font-size: 50px; color: #2b2e2e; font-family: 'Microsoft YaHei';">ABOUT</a>
+            <br>
+            <h style="font-size: 30px; color: #2b2e2e; font-family: 'Microsoft YaHei'">公司简介</h>
+          </div>
         </div>
       </div>
+      <div><img style="width: 100%" src="../.././static/img/foot/s5-bg.jpg"></div>
     </div>
     <div class="footer">
-      <div><img style="width: 100%" src="../.././static/img/foot/s5-bg.jpg"></div>
       <div class="footMain">
-        <div class="footMainList"></div>
-        <div class="footMainContact"></div>
+        <div class="footMainList">
+          <row>
+            <i-col span="6"><div style="height: 260px; border-right: 1px solid rgba(255,255,255,0.5); padding-left: 15px">
+              <ul>
+                <a style="font-size: 22px; font-family: 'Microsoft YaHei'; color: white; margin: 10px 0">简介</a>
+                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">ABOUT-US</p>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">公司简介</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">愿景与使命</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">业务架构</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">企业文化</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">工作机会</a></li>
+              </ul>
+            </div></i-col>
+            <i-col span="6"><div style="height: 260px; border-right: 1px solid rgba(255,255,255,0.5); padding-left: 15px">
+              <ul>
+                <a style="font-size: 22px; font-family: 'Microsoft YaHei'; color: white; margin: 10px 0">产品</a>
+                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">Product</p>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">医疗健康</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">智能汽车互联</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">平台产品</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">企业应用</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">一体化应用设备</a></li>
+              </ul>
+            </div></i-col>
+            <i-col span="6"><div style="height: 260px; border-right: 1px solid rgba(255,255,255,0.5); padding-left: 15px">
+              <ul>
+                <a style="font-size: 22px; font-family: 'Microsoft YaHei'; color: white; margin: 10px 0">云</a>
+                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">Cloud</p>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">云管理服务</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">医疗研究云平台</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">中小企业云平台</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">知识工作自动化</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">教与学智能服务</a></li>
+              </ul>
+            </div></i-col>
+            <i-col span="6"><div style="height: 260px; border-right: 1px solid rgba(255,255,255,0.5); padding-left: 15px">
+              <ul>
+                <a style="font-size: 22px; font-family: 'Microsoft YaHei'; color: white; margin: 10px 0">服务</a>
+                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">Service</p>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">产品工程服务</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">专业化测试服务</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">一站式BPO服务</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">软件工程服务</a></li>
+                <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">性能工程服务</a></li>
+              </ul>
+            </div></i-col>
+          </row>
+        </div>
+        <div class="footMainContact">
+          <div style="width: 90%; height: 100%; background-color: #202125; margin-left: 10%; padding-top: 70px; text-align: center">
+            <p style="font-size: 14px; font-family: 'Microsoft YaHei'; color: white">24小时服务热线</p>
+            <p style="font-size: 22px; font-family: 'Microsoft YaHei'; margin: 10px 0 30px 0; color: #218ecd; font-weight: bold">400-400-4000011</p>
+            <p><img src="../.././static/img/w.gif"></p>
+            <p style="font-size: 14px; font-family: 'Microsoft YaHei'; color: white">官方微信</p>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255,255,255,0.5); height: 70px">
+        <div style="width: 80%; margin-left: 10%; height: 70px">
+          <div style="width: 72%; height: 70px; float: left; text-align: center">
+            <p style="font-size: 10px; color: white; padding: 26px 0">Copyright ©中文网站名称. 京ICP备88888888号  京公网安备22000000000001号</p>
+          </div>
+          <div style="width: 28%; height: 70px; float: left">
+            <div style="background-color: #202125; height: 70px; width: 90%; margin-left: 10%; text-align: center">
+              <button class="footBtn">
+                <icon custom="iconfont icon-icon_service"/>
+              </button>
+              <button class="footBtn">
+                <icon custom="iconfont icon-icon_qq"/>
+              </button>
+              <button class="footBtn">
+                <icon custom="iconfont icon-icon_wechat"/>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -541,6 +617,10 @@ export default {
 <style>
   a:hover {
     color: peachpuff;
+  }
+  li {
+    list-style-type:none;
+    height: 30px;
   }
   .fontTitle1{
     color: #666666;
@@ -822,8 +902,7 @@ export default {
     cursor: pointer;
   }
   .about {
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
   }
   .aboutHeaderPc {
     width: 648px;
@@ -840,7 +919,7 @@ export default {
   }
   .footMain {
     width: 80%;
-    height: 500px;
+    height: 380px;
     margin-left: 10%;
   }
   .footMainList {
@@ -848,13 +927,20 @@ export default {
     height: 380px;
     float: left;
     padding: 60px 0;
-    background-color: #999999;
   }
   .footMainContact {
     width: 28%;
     height: 380px;
     float: left;
-    padding: 60px 0;
-    background-color: peachpuff;
+  }
+  .footBtn {
+    width:30px;
+    height:30px;
+    border-radius:15px;
+    border: 0px;
+    cursor: pointer;
+    outline: none;
+    background-color: #218ecd;
+    margin: 20px 5px;
   }
 </style>
