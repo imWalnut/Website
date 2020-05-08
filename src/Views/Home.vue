@@ -445,13 +445,13 @@
       <div><img style="width: 100%" src="../.././static/img/foot/s5-bg.jpg"></div>
     </div>
     <div class="footer">
-      <div class="footMain">
-        <div class="footMainList">
+      <div :class="this.footMain">
+        <div :class="this.footMainList">
           <row>
             <i-col span="6"><div style="height: 260px; border-right: 1px solid rgba(255,255,255,0.5); padding-left: 15px">
               <ul>
                 <a style="font-size: 22px; font-family: 'Microsoft YaHei'; color: white; margin: 10px 0">简介</a>
-                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">ABOUT-US</p>
+                <p style="font-family: 'Microsoft YaHei'; font-size: 24px; color: rgba(255,255,255,0.5); margin: 0 0 25px">ABOUT</p>
                 <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">公司简介</a></li>
                 <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">愿景与使命</a></li>
                 <li><a style="color: rgba(255,255,255,0.8); font-size: 14px; font-family: 'Microsoft YaHei'">业务架构</a></li>
@@ -494,8 +494,8 @@
             </div></i-col>
           </row>
         </div>
-        <div class="footMainContact">
-          <div style="width: 90%; height: 100%; background-color: #202125; margin-left: 10%; padding-top: 70px; text-align: center">
+        <div :class="this.footMainContact">
+          <div :class="this.footContact">
             <p style="font-size: 14px; font-family: 'Microsoft YaHei'; color: white">24小时服务热线</p>
             <p style="font-size: 22px; font-family: 'Microsoft YaHei'; margin: 10px 0 30px 0; color: #218ecd; font-weight: bold">400-400-4000011</p>
             <p><img src="../.././static/img/w.gif"></p>
@@ -503,13 +503,10 @@
           </div>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.5); height: 70px">
-        <div style="width: 80%; margin-left: 10%; height: 70px">
-          <div style="width: 72%; height: 70px; float: left; text-align: center">
-            <p style="font-size: 10px; color: white; padding: 26px 0">Copyright ©中文网站名称. 京ICP备88888888号  京公网安备22000000000001号</p>
-          </div>
-          <div style="width: 28%; height: 70px; float: left">
-            <div style="background-color: #202125; height: 70px; width: 90%; margin-left: 10%; text-align: center">
+      <div :class="this.copyright">
+        <div>
+          <div :class="this.copyrightPart1">
+            <div style="background-color: #202125; height: 100%; text-align: center">
               <button class="footBtn">
                 <icon custom="iconfont icon-icon_service"/>
               </button>
@@ -521,6 +518,9 @@
               </button>
             </div>
           </div>
+          <div :class="this.copyrightPart2">
+            <p style="font-size: 10px; color: white; padding: 26px 0">Copyright ©中文网站名称. 京ICP备88888888号  京公网安备22000000000001号</p>
+          </div>
         </div>
       </div>
     </div>
@@ -528,7 +528,10 @@
 </template>
 
 <script>
-export default {
+  import '../assets/css/homePc.css'
+  import '../assets/css/homePad.css'
+  import '../assets/css/homeCell.css'
+  export default {
   data () {
     return {
       scroll: 0,
@@ -546,6 +549,12 @@ export default {
       bannerPic3: '',
       industryStyle: '',
       cloudColStyle: '',
+      footMain: '',
+      footMainList: '',
+      footMainContact: '',
+      footContact: '',
+      copyrightPart1: '',
+      copyrightPart2: '',
     }
   },
   created() {
@@ -568,6 +577,7 @@ export default {
       this.setHeaderNav()
       this.setHeaderBanner()
       this.setCloud()
+      this.serFoot()
     },
     //nav
     setHeaderNav () {
@@ -608,6 +618,23 @@ export default {
     setCloud () {
       this.cloudColStyle = 'height:' + this.pageWidth * 0.26 + 'px'
     },
+    serFoot () {
+      let val = ''
+      if (this.pageWidth >= 1000){
+        val = 'Pc'
+      } else if (this.pageWidth < 1000 && this.pageWidth > 700) {
+        val = 'Pad'
+      } else if (this.pageWidth <= 700) {
+        val = 'Cell'
+      }
+      this.footMain = 'footMain' + val
+      this.footMainList = 'footMainList' + val
+      this.footMainContact = 'footMainContact' + val
+      this.footContact = 'footContact' + val
+      this.copyright = 'copyright' + val
+      this.copyrightPart1 = 'copyrightPart1' + val
+      this.copyrightPart2 = 'copyrightPart2' + val
+    }
   },
   mounted() {
     this.handleResponsivePage()
@@ -780,15 +807,6 @@ export default {
     height: 670px;
     margin-left: 10%;
   }
-  .productMainRowPc {
-    width: 100%;
-    height: 320px;
-    top: 30px;
-    text-align: center;
-  }
-  .productMainColPc {
-    height: 320px;
-  }
   .productMainButton {
     width: 120px;
     height: 120px;
@@ -797,44 +815,10 @@ export default {
     outline: none;
     cursor: pointer
   }
-  .productMainItemPc {
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    font-family: 'Microsoft YaHei';
-    line-height: 50px
-  }
-  .productFootPc {
-    width: 100%;
-    height: 90px;
-    text-align: center;
-  }
   .cloud {
     width: 80%;
     margin-left: 10%;
     margin-bottom: 60px;
-  }
-  .cloudHeaderPc {
-    width: 648px;
-    height: 140px;
-    background-image: url("../.././static/img/cloud/cloud.png");
-    background-repeat: no-repeat;
-    background-size: 648px 140px;
-    margin: 70px 0px 40px 0px;
-    overflow: hidden;
-  }
-  .CloudTitlePc {
-    width: 300px;
-    height: 120px;
-    margin-top: 20px;
-    margin-left: 50px;
-  }
-  .cloudMainPc {
-    width: 100%;
-    margin-top: 50px;
-  }
-  .cloudColPc {
-    padding: 15px;
   }
   .serve {
     width: 100%;
@@ -842,12 +826,6 @@ export default {
     background-image: url("../.././static/img/server/s4-bg.jpg");
     background-repeat: no-repeat;
     background-size: 100% 650px;
-  }
-  .serveHeaderPc {
-    padding: 60px 0 10px 0;
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
   }
   .serveMain {
     width: 100%;
@@ -868,18 +846,6 @@ export default {
     width: 10%;
     height: 100%;
     float: left;
-  }
-  .serveButtonPc {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    border: 0;
-    background-color: #a7bdf6;
-    cursor: pointer;
-    outline: none;
-  }
-  .serveButtonPc:hover {
-    background-color: aquamarine;
   }
   .serveBannerItem {
     height: 250px;
@@ -904,34 +870,9 @@ export default {
   .about {
     width: 100%;
   }
-  .aboutHeaderPc {
-    width: 648px;
-    height: 140px;
-    background-image: url("../.././static/img/about/about.png");
-    background-repeat: no-repeat;
-    background-size: 648px 140px;
-    margin: 70px 0px 40px 0px;
-    overflow: hidden;
-  }
   .footer {
     width: 100%;
     background-color: #218ecd;
-  }
-  .footMain {
-    width: 80%;
-    height: 380px;
-    margin-left: 10%;
-  }
-  .footMainList {
-    width: 72%;
-    height: 380px;
-    float: left;
-    padding: 60px 0;
-  }
-  .footMainContact {
-    width: 28%;
-    height: 380px;
-    float: left;
   }
   .footBtn {
     width:30px;
@@ -941,6 +882,6 @@ export default {
     cursor: pointer;
     outline: none;
     background-color: #218ecd;
-    margin: 20px 5px;
+    margin: 5px 5px;
   }
 </style>

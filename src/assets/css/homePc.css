@@ -1,0 +1,124 @@
+/*product*/
+.productMainRowPc {
+  width: 100%;
+  height: 320px;
+  top: 30px;
+  text-align: center;
+}
+.productMainColPc {
+  height: 320px;
+}
+.productMainItemPc {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Microsoft YaHei';
+  line-height: 50px
+}
+.productFootPc {
+  width: 100%;
+  height: 90px;
+  text-align: center;
+}
+
+
+/*cloud*/
+.cloudHeaderPc {
+  width: 648px;
+  height: 140px;
+  background-image: url("../../../static/img/cloud/cloud.png");
+  background-repeat: no-repeat;
+  background-size: 648px 140px;
+  margin: 70px 0px 40px 0px;
+  overflow: hidden;
+}
+.CloudTitlePc {
+  width: 300px;
+  height: 120px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.cloudMainPc {
+  width: 100%;
+  margin-top: 50px;
+}
+.cloudColPc {
+  padding: 15px;
+}
+
+
+/*serve*/
+.serveHeaderPc {
+  padding: 60px 0 10px 0;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+.serveButtonPc {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 0;
+  background-color: #a7bdf6;
+  cursor: pointer;
+  outline: none;
+}
+.serveButtonPc:hover {
+  background-color: aquamarine;
+}
+
+
+/*about*/
+.aboutHeaderPc {
+  width: 648px;
+  height: 140px;
+  background-image: url("../../../static/img/about/about.png");
+  background-repeat: no-repeat;
+  background-size: 648px 140px;
+  margin: 70px 0px 40px 0px;
+  overflow: hidden;
+}
+
+
+/*foot*/
+.footMainPc {
+  width: 80%;
+  height: 380px;
+  margin-left: 10%;
+}
+.footMainListPc {
+  width: 72%;
+  height: 380px;
+  float: left;
+  padding: 60px 0;
+}
+.footMainContactPc {
+  width: 28%;
+  height: 380px;
+  float: left;
+}
+.footContactPc {
+  width: 90%;
+  height: 380px;
+  background-color: #202125;
+  padding-top: 70px;
+  text-align: center;
+  margin-left: 10%
+}
+.copyrightPc {
+  border-top: 1px solid rgba(255,255,255,0.5);
+  height: 70px
+}
+.copyrightPart1Pc {
+  width: 32.4%;
+  height: 70px;
+  padding-left: 2.24%;
+  padding-right: 10%;
+  float: right;
+}
+.copyrightPart2Pc {
+  width: 67.6%;
+  height: 70px;
+  float: right;
+  text-align: center
+}
